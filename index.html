@@ -157,7 +157,7 @@ etherpad: https://etherpad.mozilla.org/2015-08-13-nmsu
       <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
       <tr> <td>10:30</td>  <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Data capstone</td> </tr>
+      <tr> <td>13:00</td>  <td>Testing and databases</td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
@@ -648,8 +648,37 @@ End of 'R' section. -->
   </div>
 
   <p><strong>If you installed Anaconda, it also has a copy of SQLite
-    <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <pre>readline</pre></a>.
-    Instructors will provide a workaround for it if needed.</strong></p>
+    <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without
+      support to <code>readline</code></a>
+    (meaning you won't be able to use the arrows keys to access command
+    history).</strong> I only know of this being a problem for Mac and Linux
+    users. A workaround for this it to use the
+    <a href="https://github.com/hanslub42/rlwrap">rlwrap</a> (readline wrapper)
+    command when starting SQLite:
+    <pre>$ rlwrap sqlite3 survey.db</pre><p>
+
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+      <h4 id="readline-macosx">Mac OS X</h4>
+      <p>
+        <code>rlwrap</code> appears to be available in
+        <a href="https://news.ycombinator.com/item?id=5087790">OSX using
+        Homebrew</a>.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="readline-linux">Linux</h4>
+      <p>
+        The <code>rlwrap</code> package is available in the standard Fedora
+        repository and appears to be available in
+        <a href="http://packages.ubuntu.com/precise/rlwrap">Ubuntu</a> too. I
+        installed it on Linux Mint 17 using:
+        <pre>$ sudo apt-get install rlwrap</pre>
+      </p>
+    </div>
+  </div>
 </div> <!-- End of 'SQLite' section. -->
 
 <!--
